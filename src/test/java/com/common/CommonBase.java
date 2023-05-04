@@ -16,7 +16,7 @@ public class CommonBase {
 
 	@BeforeTest
 	@Parameters("browser")
-	public void tearUp(@Optional("chrome") String browser) {
+	public void tearUp(@Optional("firefox") String browser) {
 		DesiredCapabilities capabilites = new DesiredCapabilities();
 
 		try {
@@ -62,3 +62,5 @@ public class CommonBase {
 
 	}
 }
+
+//C:\Users\Nut Shell\.m2\repository\org\testng\testng\6.14.3\testng-6.14.3.jar

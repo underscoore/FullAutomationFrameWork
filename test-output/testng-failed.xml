@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [CorssBrowserTesting]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="RegressionOnFirefox(failed)">
-    <parameter name="browser" value="unknown"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.test.NewTest">
         <methods>
