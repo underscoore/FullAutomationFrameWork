@@ -16,6 +16,7 @@ public class NewTest extends CommonBase {
 		CommonUtil.threadSleep(20);
 	}
 
+	@Test
 	public void standalone2() throws MalformedURLException, InterruptedException {
 		System.out.println(remoteDriver.getCurrentUrl());
 		System.out.println(remoteDriver.getTitle());
