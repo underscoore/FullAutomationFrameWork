@@ -1,0 +1,50 @@
+[ERROR] 2023-05-05 13:29:00.196 [main] CommonLib - Element Not Found
+[INFO ] 2023-05-05 13:31:13.360 [main] CommonLib - Element Clicking
+[INFO ] 2023-05-05 13:31:13.406 [main] CommonLib - Element Clicked
+[INFO ] 2023-05-05 13:31:59.275 [main] CommonLib - Element Clicking
+[INFO ] 2023-05-05 13:31:59.519 [main] CommonLib - Element Clicked
+[INFO ] 2023-05-05 13:43:12.192 [main] MainLogger - &s is launched on http://localhost:4444/
+[INFO ] 2023-05-05 13:43:12.202 [main] MainLogger - Maximized firefox window
+[INFO ] 2023-05-05 13:43:13.932 [main] MainLogger - Launched http://demo.seleniumeasy.com/ URL
+[INFO ] 2023-05-05 13:43:13.956 [main] MainLogger - Element Clicking
+[INFO ] 2023-05-05 13:43:14.194 [main] MainLogger - Element Clicked
+[INFO ] 2023-05-05 13:44:40.888 [main] MainLogger - &s is launched on http://localhost:4444/
+[INFO ] 2023-05-05 13:44:41.009 [main] MainLogger - Maximized edge window
+[INFO ] 2023-05-05 13:44:43.907 [main] MainLogger - Launched http://demo.seleniumeasy.com/ URL
+[INFO ] 2023-05-05 13:44:43.925 [main] MainLogger - Element Clicking
+[INFO ] 2023-05-05 13:44:43.971 [main] MainLogger - Element Clicked
+[INFO ] 2023-05-05 13:46:12.002 [main] MainLogger - &s is launched on http://localhost:4444/
+[INFO ] 2023-05-05 13:46:12.138 [main] MainLogger - Maximized edge window
+[INFO ] 2023-05-05 13:46:14.776 [main] MainLogger - Launched http://demo.seleniumeasy.com/ URL
+[INFO ] 2023-05-05 13:46:14.797 [main] MainLogger - Element Clicking
+[INFO ] 2023-05-05 13:46:14.842 [main] MainLogger - Element Clicked
+[INFO ] 2023-05-05 13:50:25.903 [main] MainLogger - &s is launched on http://localhost:4444/
+[INFO ] 2023-05-05 13:50:26.039 [main] MainLogger - Maximized edge window
+[INFO ] 2023-05-05 13:50:27.974 [main] MainLogger - Launched http://demo.seleniumeasy.com/ URL
+[INFO ] 2023-05-05 13:50:27.995 [main] MainLogger - Element Clicking
+[INFO ] 2023-05-05 13:50:28.041 [main] MainLogger - Element Clicked
+[INFO ] 2023-05-05 13:51:42.582 [main] MainLogger - http://localhost:4444/ is launched on edge
+[INFO ] 2023-05-05 13:51:42.718 [main] MainLogger - Maximized edge window
+[INFO ] 2023-05-05 13:51:44.665 [main] MainLogger - Launched http://demo.seleniumeasy.com/ URL
+[INFO ] 2023-05-05 13:51:44.683 [main] MainLogger - Element Clicking
+[INFO ] 2023-05-05 13:51:44.729 [main] MainLogger - Element Clicked
+[INFO ] 2023-05-05 13:56:10.915 [main] MainLogger - Serever URL http://localhost:4444/ is launched on edge
+[INFO ] 2023-05-05 13:56:11.052 [main] MainLogger - Maximized edge window
+[INFO ] 2023-05-05 13:56:15.292 [main] MainLogger - Launched application on http://demo.seleniumeasy.com/ URL
+[INFO ] 2023-05-05 13:56:15.372 [main] MainLogger - Element Clicked: [[RemoteWebDriver: msedge on WINDOWS (47daca21d591985fda6ce6767b783370)] -> xpath: //a[@id='basic_example']/span]
+[INFO ] 2023-05-05 13:58:12.109 [main] MainLogger - Server URL http://localhost:4444/ is launched on firefox
+[INFO ] 2023-05-05 13:58:12.120 [main] MainLogger - Maximized firefox window
+[INFO ] 2023-05-05 13:58:13.580 [main] MainLogger - Launched application on http://demo.seleniumeasy.com/ URL
+[INFO ] 2023-05-05 13:58:13.845 [main] MainLogger - Element Clicked: [[RemoteWebDriver: firefox on WINDOWS (7d8a1a69-b4d7-4484-abda-92d0aaf4e52a)] -> xpath: //a[@id='basic_example']/span]
+[INFO ] 2023-05-05 13:59:12.617 [main] MainLogger - Server URL http://localhost:4444/ is launched on edge
+[INFO ] 2023-05-05 13:59:12.753 [main] MainLogger - Maximized edge window
+[INFO ] 2023-05-05 13:59:15.723 [main] MainLogger - Launched application on http://demo.seleniumeasy.com/ URL
+[ERROR] 2023-05-05 13:59:15.769 [main] MainLogger - Element not FOUND : Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='basic_example']/spann' 
+[INFO ] 2023-05-05 14:30:25.911 [main] MainLogger - Server URL http://localhost:4444/ is launched on edge
+[INFO ] 2023-05-05 14:30:26.035 [main] MainLogger - Maximized edge window
+[INFO ] 2023-05-05 14:30:28.371 [main] MainLogger - Launched application on http://demo.seleniumeasy.com/ URL
+[ERROR] 2023-05-05 14:30:28.422 [main] MainLogger - Element not FOUND : Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='basic_example']/spann' 
+[INFO ] 2023-05-05 14:31:12.342 [main] MainLogger - Server URL http://localhost:4444/ is launched on firefox
+[INFO ] 2023-05-05 14:31:12.353 [main] MainLogger - Maximized firefox window
+[INFO ] 2023-05-05 14:31:13.751 [main] MainLogger - Launched application on http://demo.seleniumeasy.com/ URL
+[INFO ] 2023-05-05 14:31:14.020 [main] MainLogger - Element Clicked: [[RemoteWebDriver: firefox on WINDOWS (53082533-6d8f-485a-8319-33ac9a7fb02c)] -> xpath: //a[@id='basic_example']/span]

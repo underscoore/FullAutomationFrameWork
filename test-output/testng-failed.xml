@@ -2,15 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [CorssBrowserTesting]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="RegressionOnFirefox(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="edge"/>
     <classes>
-      <class name="com.test.NewTest">
+      <class name="com.test.HomeTest">
         <methods>
-          <include name="standalone"/>
+          <include name="basicPageTest"/>
           <include name="tearDown"/>
           <include name="tearUp"/>
         </methods>
-      </class> <!-- com.test.NewTest -->
+      </class> <!-- com.test.HomeTest -->
     </classes>
   </test> <!-- RegressionOnFirefox(failed) -->
 </suite> <!-- Failed suite [CorssBrowserTesting] -->

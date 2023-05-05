@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-CorssBrowserTesting">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CorssBrowserTesting" title="com.test.NewTest" class="method navigator-link" hash-for-method="standalone">standalone</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CorssBrowserTesting" title="com.test.HomeTest" class="method navigator-link" hash-for-method="basicPageTest">basicPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CorssBrowserTesting" title="com.test.HomeTest" class="method navigator-link" hash-for-method="standalone2">standalone2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-CorssBrowserTesting -->
@@ -120,14 +125,21 @@
           <div class="suite-CorssBrowserTesting-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.test.NewTest</span>
+              <span class="class-name">com.test.HomeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="standalone">
-                  </a> <!-- standalone -->
-                  <span class="method-name">standalone</span>
+                  <a name="basicPageTest">
+                  </a> <!-- basicPageTest -->
+                  <span class="method-name">basicPageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="standalone2">
+                  </a> <!-- standalone2 -->
+                  <span class="method-name">standalone2</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,7 +160,7 @@
       &lt;package name=&quot;com.test.*&quot;/&gt;
     &lt;/packages&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.test.NewTest&quot;/&gt;
+      &lt;class name=&quot;com.test.HomeTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionOnFirefox --&gt;
 &lt;/suite&gt; &lt;!-- CorssBrowserTesting --&gt;
@@ -188,16 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'standalone')
-data.setCell(0, 2, 'com.test.NewTest')
-data.setCell(0, 3, 20030);
+data.setCell(0, 1, 'basicPageTest')
+data.setCell(0, 2, 'com.test.HomeTest')
+data.setCell(0, 3, 264);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'standalone2')
+data.setCell(1, 2, 'com.test.HomeTest')
+data.setCell(1, 3, 10);
 window.suiteTableData['CorssBrowserTesting']= { tableData: data, tableDiv: 'times-div-CorssBrowserTesting'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 274 ms</span>
               <div id="times-div-CorssBrowserTesting">
               </div> <!-- times-div-CorssBrowserTesting -->
             </div> <!-- times-div -->
@@ -223,18 +239,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.test.NewTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.test.HomeTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">tearUp(firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">standalone</span>
-                <span class="method-start">9175 ms</span>
+                <span class="method-name">basicPageTest</span>
+                <span class="method-start">8797 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">standalone2</span>
+                <span class="method-start">9062 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">29207 ms</span>
+                <span class="method-start">9073 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
