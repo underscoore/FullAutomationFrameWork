@@ -1,9 +1,10 @@
 package com.common;
 
 import java.io.FileReader;
+import java.net.Socket;
 import java.util.Properties;
 
-public class CommonUtil {
+public class CommonUtil extends MainLogger {
 
 	// Reading Property File and Getting theProp value
 	// Property file is located at: /FullFrameWork/src/test/resources
@@ -21,6 +22,18 @@ public class CommonUtil {
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+	}
+
+	// Checking the Selenium stand-alone server is up or !up
+	// Logging in both the cases if server or !server
+	public static boolean isServerRunning(String host, int port) {
+		try (Socket socket = new Socket(host, port)) {
+			logger.info("Selenium Stand Alone server is UP and Running");
+			return true;
+		} catch (Exception e) {
+			logger.info("Does not found Selenium stand-alone server");
+			return false;
 		}
 	}
 }

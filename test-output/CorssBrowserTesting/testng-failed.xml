@@ -4,13 +4,13 @@
   <test thread-count="5" name="RegressionOnFirefox(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
-      <class name="com.test.HomeTest">
+      <class name="com.test.ValidateBasePageTitle">
         <methods>
-          <include name="basicPageTest"/>
+          <include name="basicPageValidationTest"/>
           <include name="tearDown"/>
           <include name="tearUp"/>
         </methods>
-      </class> <!-- com.test.HomeTest -->
+      </class> <!-- com.test.ValidateBasePageTitle -->
     </classes>
   </test> <!-- RegressionOnFirefox(failed) -->
 </suite> <!-- Failed suite [CorssBrowserTesting] -->
