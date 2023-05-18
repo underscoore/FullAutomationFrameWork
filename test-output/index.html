@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-CorssBrowserTesting" class="navigator-link">
-              <span class="suite-name border-failed">CorssBrowserTesting</span>
+              <span class="suite-name border-passed">CorssBrowserTesting</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-CorssBrowserTesting" class="hide-methods failed suite-CorssBrowserTesting"> (hide)</a> <!-- hide-methods failed suite-CorssBrowserTesting -->
-                      <a href="#" panel-name="suite-CorssBrowserTesting" class="show-methods failed suite-CorssBrowserTesting"> (show)</a> <!-- show-methods failed suite-CorssBrowserTesting -->
-                    </span>
-                    <div class="method-list-content failed suite-CorssBrowserTesting">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CorssBrowserTesting" title="com.test.ValidateBasePageTitle" class="method navigator-link" hash-for-method="basicPageValidationTest">basicPageValidationTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-CorssBrowserTesting -->
+                    <span class="method-stats">0 methods,   </span>
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,29 +103,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-CorssBrowserTesting" class="panel CorssBrowserTesting">
-          <div class="suite-CorssBrowserTesting-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.test.ValidateBasePageTitle</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="basicPageValidationTest">
-                  </a> <!-- basicPageValidationTest -->
-                  <span class="method-name">basicPageValidationTest</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;this.remoteDriver&quot; is null
-	at com.pages.BasicPage.&lt;init&gt;(BasicPage.java:24)
-	at java.base/java.lang.Class.newInstance(Class.java:645)
-	at org.openqa.selenium.support.PageFactory.instantiatePage(PageFactory.java:131)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:64)
-	at com.test.ValidateBasePageTitle.basicPageValidationTest(ValidateBasePageTitle.java:16)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CorssBrowserTesting-class-failed -->
         </div> <!-- panel CorssBrowserTesting -->
         <div panel-name="test-xml-CorssBrowserTesting" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -196,16 +159,11 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'basicPageValidationTest')
-data.setCell(0, 2, 'com.test.ValidateBasePageTitle')
-data.setCell(0, 3, 5);
+data.addRows(0);
 window.suiteTableData['CorssBrowserTesting']= { tableData: data, tableDiv: 'times-div-CorssBrowserTesting'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 ms</span>
               <div id="times-div-CorssBrowserTesting">
               </div> <!-- times-div-CorssBrowserTesting -->
             </div> <!-- times-div -->
@@ -220,9 +178,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-CorssBrowserTesting" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.test.ValidateBasePageTitle</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">basicPageValidationTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-CorssBrowserTesting" class="panel">
@@ -236,15 +201,9 @@ return data;
                 <span class="method-name">tearUp(edge)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">basicPageValidationTest</span>
-                <span class="method-start">16624 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">16632 ms</span>
+                <span class="method-start">9105 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
