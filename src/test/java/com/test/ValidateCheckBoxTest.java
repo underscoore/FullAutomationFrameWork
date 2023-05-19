@@ -8,7 +8,7 @@ import com.pages.CheckBoxDemoPage;
 
 public class ValidateCheckBoxTest extends CommonBase {
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void checkBox() {
 		CheckBoxDemoPage checkBox = PageFactory.initElements(driver, CheckBoxDemoPage.class);
 
