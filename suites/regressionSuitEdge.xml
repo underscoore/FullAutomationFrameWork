@@ -7,7 +7,7 @@
 			<package name="com.test.advance.*" />
 		</packages>
 	</test>-->
-	<test name="RegressionOnFirefox">
+	<test name="RegressionOnEdge">
 		<parameter name="browser" value="edge"></parameter>
 		<packages>
 			<package name="com.test.*"></package>

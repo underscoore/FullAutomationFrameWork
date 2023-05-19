@@ -5,15 +5,34 @@ import org.openqa.selenium.WebElement;
 public class CommonLib extends MainLogger {
 
 	// Click Element
-	public static Boolean clickElement(WebElement locator) {
+	public static void clickElement(WebElement locator) {
 
-		try {
-			locator.click();
-			logger.info(String.format("Element Clicked: %s", locator));
-			return true;
-		} catch (Exception e) {
+		if (locator.isDisplayed() && locator.isEnabled()) {
+			try {
+				locator.click();
+				logger.info(String.format("Element Clicked: %s", locator));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		} else {
 			logger.error(String.format("Element not FOUND : %s ", locator));
-			return false;
+		}
+
+	}
+
+	// Send Keys
+	public static void sendKeys(WebElement locator, String value) {
+
+		if (locator.isDisplayed() && locator.isEnabled()) {
+			try {
+				locator.sendKeys(value);
+				logger.info(String.format("Value Entered: %s", value));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			logger.error(String.format("Element not FOUND : %s ", locator));
 		}
 
 	}

@@ -1,77 +1,146 @@
 package com.common;
 
 import java.net.MalformedURLException;
+import java.net.Socket;
 import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-public class CommonBase extends MainLogger {
-	protected WebDriver remoteDriver = null;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
-	@BeforeTest
+public class CommonBase extends MainLogger {
+	protected WebDriver driver = null;
+	static DesiredCapabilities capabilites = new DesiredCapabilities();
+
+	@BeforeMethod
 	@Parameters("browser")
 	public void tearUp(@Optional("firefox") String browser) {
-		DesiredCapabilities capabilites = new DesiredCapabilities();
 
-		try {
-			if (browser.equals("chrome")) {
-				capabilites.setBrowserName("chrome");
-				remoteDriver = new RemoteWebDriver(new URL(CommonUtil.getProperyData("serverURL")), capabilites);
-				logger.info(String.format("Server URL %s is launched on %s", CommonUtil.getProperyData("serverURL"),
-						browser));
-				remoteDriver.manage().window().maximize();
-				logger.info(String.format("Maximized %s window", browser));
-				remoteDriver.get(CommonUtil.getProperyData("baseURL"));
-				logger.info(String.format("Launched application on %s URL", CommonUtil.getProperyData("baseURL")));
-			} else if (browser.equals("firefox")) {
-				capabilites.setBrowserName("firefox");
-				remoteDriver = new RemoteWebDriver(new URL(CommonUtil.getProperyData("serverURL")), capabilites);
-				logger.info(String.format("Server URL %s is launched on %s", CommonUtil.getProperyData("serverURL"),
-						browser));
-				remoteDriver.manage().window().maximize();
-				logger.info(String.format("Maximized %s window", browser));
-				remoteDriver.get(CommonUtil.getProperyData("baseURL"));
-				logger.info(String.format("Launched application on %s URL", CommonUtil.getProperyData("baseURL")));
-			} else if (browser.equals("edge")) {
-				capabilites.setBrowserName("MicrosoftEdge");
-				remoteDriver = new RemoteWebDriver(new URL(CommonUtil.getProperyData("serverURL")), capabilites);
-				logger.info(String.format("Server URL %s is launched on %s", CommonUtil.getProperyData("serverURL"),
-						browser));
-				remoteDriver.manage().window().maximize();
-				logger.info(String.format("Maximized %s window", browser));
-				remoteDriver.get(CommonUtil.getProperyData("baseURL"));
-				logger.info(String.format("Launched application on %s URL", CommonUtil.getProperyData("baseURL")));
-			} else {
+		// Check if Selenium Standalone Server is running
+		boolean isStandaloneServerUp = isServerRunning("localhost", 4444);
 
-				// Handling if browser does not support or browser not found
-				try {
-					System.out.println(String.format("Browser [%s] does not support", browser));
-				} catch (NullPointerException e) {
-					e.printStackTrace();
-					remoteDriver.close();
+		if (isStandaloneServerUp) {
+			// Run tests using the Selenium Standalone Server
+			try {
+				if (browser.equals("chrome")) {
+					capabilites.setBrowserName("chrome");
+					driver = new RemoteWebDriver(new URL(CommonUtil.getProperyData("serverURL")), capabilites);
+					logger.info(String.format("Server URL %s is launched on %s", CommonUtil.getProperyData("serverURL"),
+							browser));
+					driver.manage().window().maximize();
+					logger.info(String.format("Maximized %s window", browser));
+					driver.get(CommonUtil.getProperyData("baseURL"));
+					logger.info(String.format("Launched application on %s URL", CommonUtil.getProperyData("baseURL")));
+				} else if (browser.equals("firefox")) {
+					capabilites.setBrowserName("firefox");
+					driver = new RemoteWebDriver(new URL(CommonUtil.getProperyData("serverURL")), capabilites);
+					logger.info(String.format("Server URL %s is launched on %s", CommonUtil.getProperyData("serverURL"),
+							browser));
+					driver.manage().window().maximize();
+					logger.info(String.format("Maximized %s window", browser));
+					driver.get(CommonUtil.getProperyData("baseURL"));
+					logger.info(String.format("Launched application on %s URL", CommonUtil.getProperyData("baseURL")));
+				} else if (browser.equals("edge")) {
+					capabilites.setBrowserName("MicrosoftEdge");
+					driver = new RemoteWebDriver(new URL(CommonUtil.getProperyData("serverURL")), capabilites);
+					logger.info(String.format("Server URL %s is launched on %s", CommonUtil.getProperyData("serverURL"),
+							browser));
+					driver.manage().window().maximize();
+					logger.info(String.format("Maximized %s window", browser));
+					driver.get(CommonUtil.getProperyData("baseURL"));
+					logger.info(String.format("Launched application on %s URL", CommonUtil.getProperyData("baseURL")));
+				} else {
+
+					// Handling if browser does not support or browser not found
+					try {
+						logger.error(String.format("Browser [%s] does not support", browser));
+					} catch (NullPointerException e) {
+						e.printStackTrace();
+						driver.close();
+					}
+
 				}
 
+				// Handling main exception
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			// Run tests using WebDriver directly
+
+			try {
+				if (browser.equals("chrome")) {
+					WebDriverManager.chromedriver().setup();
+					driver = new ChromeDriver();
+					driver.manage().window().maximize();
+					logger.info(String.format("Maximized %s window", browser));
+					driver.get(CommonUtil.getProperyData("baseURL"));
+					logger.info(String.format("Launched application on %s URL", CommonUtil.getProperyData("baseURL")));
+				} else if (browser.equals("firefox")) {
+					WebDriverManager.firefoxdriver().setup();
+					driver = new FirefoxDriver();
+					driver.manage().window().maximize();
+					logger.info(String.format("Maximized %s window", browser));
+					driver.get(CommonUtil.getProperyData("baseURL"));
+					logger.info(String.format("Launched application on %s URL", CommonUtil.getProperyData("baseURL")));
+				} else if (browser.equals("edge")) {
+					WebDriverManager.edgedriver().setup();
+					driver = new EdgeDriver();
+					driver.manage().window().maximize();
+					logger.info(String.format("Maximized %s window", browser));
+					driver.get(CommonUtil.getProperyData("baseURL"));
+					logger.info(String.format("Launched application on %s URL", CommonUtil.getProperyData("baseURL")));
+				} else {
+
+					// Handling if browser does not support or browser not found
+					try {
+						logger.error(String.format("Browser [%s] does not support", browser));
+					} catch (NullPointerException e) {
+						e.printStackTrace();
+						driver.close();
+					}
+
+				}
+
+				// Handling main exception
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
-			// Handling main exception
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
+			try {
+				driver.get(CommonUtil.getProperyData("baseURL"));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
 
 	}
 
-	@AfterTest
-	public void tearDown() {
-		remoteDriver.close();
-
+	static boolean isServerRunning(String host, int port) {
+		try (Socket socket = new Socket(host, port)) {
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 }

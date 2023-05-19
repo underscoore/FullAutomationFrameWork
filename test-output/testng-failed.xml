@@ -2,15 +2,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [CorssBrowserTesting]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="RegressionOnFirefox(failed)">
-    <parameter name="browser" value="edge"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.test.ValidateBasePageTitle">
+      <class name="com.test.ValidateSimpleFormTest">
         <methods>
-          <include name="basicPageValidationTest"/>
+          <include name="checkBox"/>
           <include name="tearDown"/>
           <include name="tearUp"/>
         </methods>
-      </class> <!-- com.test.ValidateBasePageTitle -->
+      </class> <!-- com.test.ValidateSimpleFormTest -->
+      <class name="com.test.ValidateCheckBoxTest">
+        <methods>
+          <include name="checkForMassage"/>
+          <include name="tearDown"/>
+          <include name="tearUp"/>
+        </methods>
+      </class> <!-- com.test.ValidateCheckBoxTest -->
     </classes>
   </test> <!-- RegressionOnFirefox(failed) -->
 </suite> <!-- Failed suite [CorssBrowserTesting] -->
