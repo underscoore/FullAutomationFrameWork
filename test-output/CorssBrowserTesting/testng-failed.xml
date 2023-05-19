@@ -4,13 +4,6 @@
   <test thread-count="5" name="RegressionOnFirefox(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.test.ValidateSimpleFormTest">
-        <methods>
-          <include name="checkBox"/>
-          <include name="tearDown"/>
-          <include name="tearUp"/>
-        </methods>
-      </class> <!-- com.test.ValidateSimpleFormTest -->
       <class name="com.test.ValidateCheckBoxTest">
         <methods>
           <include name="checkForMassage"/>
