@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.common.CommonBase;
+import com.common.CommonLib;
 
 public class CheckBoxDemoPage extends CommonBase {
 	// Link Input Form
@@ -18,16 +19,18 @@ public class CheckBoxDemoPage extends CommonBase {
 	WebElement checkBox;
 
 	public void clickInputFormLink() {
-		inputFormLink.click();
+		CommonLib.clickElement(inputFormLink);
 	}
 
-	// enterPassword
 	public void clickCheckBoxDemoLink() {
-		checkBoxDemoLink.click();
+		CommonLib.clickElement(checkBoxDemoLink);
 	}
 
-	// submit
 	public void selectCheckBox() {
-		checkBox.click();
+		CommonLib.selectCheckBox(checkBox);
+	}
+
+	public void deselectCheckBox() {
+		CommonLib.deselectCheckBox(checkBox);
 	}
 }

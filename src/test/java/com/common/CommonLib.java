@@ -37,6 +37,40 @@ public class CommonLib extends MainLogger {
 
 	}
 
+	// Check the checkbox
+	public static void selectCheckBox(WebElement locator) {
+
+		if (locator.isDisplayed() && locator.isEnabled() && !locator.isSelected()) {
+			logger.info(String.format("Checkbox is not checked"));
+			try {
+				locator.click();
+				logger.info(String.format("Element Checked: %s", locator));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			logger.error(String.format("Element not FOUND : %s ", locator));
+		}
+
+	}
+
+	// Uncheck the checkbox
+	public static void deselectCheckBox(WebElement locator) {
+
+		if (locator.isDisplayed() && locator.isEnabled() && locator.isSelected()) {
+			logger.info(String.format("Checkbox is checked"));
+			try {
+				locator.click();
+				logger.info(String.format("Element Unchecked: %s", locator));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			logger.error(String.format("Element not FOUND : %s ", locator));
+		}
+
+	}
+
 	// This function is used to compare the Actual and Expected Text
 	public static Boolean checkTwoTextStrings(WebElement locator, String expectedText) {
 		try {

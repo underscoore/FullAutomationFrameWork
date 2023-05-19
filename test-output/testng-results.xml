@@ -2,12 +2,12 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-19T08:42:19Z" name="CorssBrowserTesting" finished-at="2023-05-19T08:42:40Z" duration-ms="21220">
+  <suite started-at="2023-05-19T12:08:02Z" name="CorssBrowserTesting" finished-at="2023-05-19T12:08:26Z" duration-ms="24025">
     <groups>
     </groups>
-    <test started-at="2023-05-19T08:42:19Z" name="RegressionOnEdge" finished-at="2023-05-19T08:42:40Z" duration-ms="21220">
-      <class name="com.test.ValidateCheckBoxTest">
-        <test-method is-config="true" signature="tearUp(java.lang.String)[pri:0, instance:com.test.ValidateCheckBoxTest@24d4d7c9]" started-at="2023-05-19T08:42:19Z" name="tearUp" finished-at="2023-05-19T08:42:36Z" duration-ms="17174" status="PASS">
+    <test started-at="2023-05-19T12:08:02Z" name="RegressionOnEdge" finished-at="2023-05-19T12:08:26Z" duration-ms="24025">
+      <class name="com.test.ValidateSimpleFormTest">
+        <test-method is-config="true" signature="tearUp(java.lang.String)[pri:0, instance:com.test.ValidateSimpleFormTest@7a527389]" started-at="2023-05-19T12:08:02Z" name="tearUp" finished-at="2023-05-19T12:08:21Z" duration-ms="19228" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method signature="checkForMassage()[pri:0, instance:com.test.ValidateCheckBoxTest@24d4d7c9]" started-at="2023-05-19T08:42:36Z" name="checkForMassage" finished-at="2023-05-19T08:42:39Z" duration-ms="3293" status="PASS">
+        <test-method signature="checkForMessage()[pri:0, instance:com.test.ValidateSimpleFormTest@7a527389]" started-at="2023-05-19T12:08:21Z" name="checkForMessage" finished-at="2023-05-19T12:08:25Z" duration-ms="4085" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkForMassage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.ValidateCheckBoxTest@24d4d7c9]" started-at="2023-05-19T08:42:39Z" name="tearDown" finished-at="2023-05-19T08:42:40Z" duration-ms="737" status="PASS">
+        </test-method> <!-- checkForMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.ValidateSimpleFormTest@7a527389]" started-at="2023-05-19T12:08:25Z" name="tearDown" finished-at="2023-05-19T12:08:26Z" duration-ms="697" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.test.ValidateCheckBoxTest -->
+      </class> <!-- com.test.ValidateSimpleFormTest -->
     </test> <!-- RegressionOnEdge -->
   </suite> <!-- CorssBrowserTesting -->
 </testng-results>

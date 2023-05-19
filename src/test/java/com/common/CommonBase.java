@@ -23,6 +23,7 @@ public class CommonBase extends MainLogger {
 
 	@BeforeMethod
 	@Parameters("browser")
+
 	public void tearUp(@Optional("firefox") String browser) {
 
 		// Check if Selenium Standalone Server is running
