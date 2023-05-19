@@ -10,6 +10,7 @@ public class CommonUtil extends MainLogger {
 	// Property file is located at: /FullFrameWork/src/test/resources
 	public static String getProperyData(String propValue) throws Exception {
 		FileReader reader = new FileReader("./src/test/resources/initial.properties");
+		logger.info(String.format("Reading Data from property file for [KEY] -  %s", propValue));
 		Properties props = new Properties();
 		props.load(reader);
 		return props.getProperty(propValue);

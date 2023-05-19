@@ -23,8 +23,16 @@ public class SimpleFormPage extends CommonBase {
 	@FindBy(xpath = "//button[@onclick='showInput();']")
 	WebElement showMessageButton;
 
-	public void clickInputFormLink() {
+	@FindBy(id = "value1")
+	WebElement value1;
 
+	@FindBy(id = "value2")
+	WebElement value2;
+
+	@FindBy(xpath = "//button[@onclick='return total()']")
+	WebElement getTotal;
+
+	public void clickInputFormLink() {
 		CommonLib.clickElement(inputFormLink);
 
 	}
@@ -42,5 +50,17 @@ public class SimpleFormPage extends CommonBase {
 
 	public void clickMessageButton() {
 		CommonLib.clickElement(showMessageButton);
+	}
+
+	public void enterValue1(String value) {
+		CommonLib.sendKeys(value1, value);
+	}
+
+	public void enterValue2(String value) {
+		CommonLib.sendKeys(value2, value);
+	}
+
+	public void getTotal() {
+		CommonLib.clickElement(getTotal);
 	}
 }

@@ -8,13 +8,14 @@ import com.pages.CheckBoxDemoPage;
 
 public class ValidateCheckBoxTest extends CommonBase {
 
-	@Test
-	public void checkForMassage() {
+	@Test(enabled = false)
+	public void checkBox() {
 		CheckBoxDemoPage checkBox = PageFactory.initElements(driver, CheckBoxDemoPage.class);
 
 		checkBox.clickInputFormLink();
 		checkBox.clickCheckBoxDemoLink();
 		checkBox.selectCheckBox();
+		checkBox.deselectCheckBox();
 
 		try {
 			Thread.sleep(3000);

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [CorssBrowserTesting]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="RegressionOnFirefox(failed)">
-    <parameter name="browser" value="firefox"/>
+  <test thread-count="5" name="RegressionOnEdge(failed)">
+    <parameter name="browser" value="edge"/>
     <classes>
-      <class name="com.test.ValidateCheckBoxTest">
+      <class name="com.test.ValidateSimpleFormTest">
         <methods>
-          <include name="checkForMassage"/>
+          <include name="checkForMessage"/>
           <include name="tearDown"/>
           <include name="tearUp"/>
         </methods>
-      </class> <!-- com.test.ValidateCheckBoxTest -->
+      </class> <!-- com.test.ValidateSimpleFormTest -->
     </classes>
-  </test> <!-- RegressionOnFirefox(failed) -->
+  </test> <!-- RegressionOnEdge(failed) -->
 </suite> <!-- Failed suite [CorssBrowserTesting] -->
