@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CorssBrowserTesting" verbose="1" thread-count="5">
+	
+	<!-- <test name="RegressionOnChrome">
+		<parameter name="browser" value="chrome" />
+		<packages>
+			<package name="com.test.advance.*" />
+		</packages>
+	</test>-->
+	<test name="RegressionOnFirefox">
+		<parameter name="browser" value="chrome"></parameter>
+		<packages>
+			<package name="com.test.*"></package>
+		</packages>
+	</test>
+	
+</suite>
