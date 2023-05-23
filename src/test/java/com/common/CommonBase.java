@@ -18,7 +18,7 @@ import org.testng.annotations.Parameters;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CommonBase extends MainLogger {
-	protected WebDriver driver = null;
+	protected static WebDriver driver = null;
 	static DesiredCapabilities capabilites = new DesiredCapabilities();
 
 	@BeforeMethod

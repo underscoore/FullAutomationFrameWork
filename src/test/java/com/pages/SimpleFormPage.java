@@ -33,34 +33,34 @@ public class SimpleFormPage extends CommonBase {
 	WebElement getTotal;
 
 	public void clickInputFormLink() {
-		CommonLib.clickElement(inputFormLink);
+		CommonLib.clickElement(driver, inputFormLink);
 
 	}
 
 	// Click Simple Form Demo
 	public void clickSimpleFormDemoLink() {
-		CommonLib.clickElement(simpleFormDemoLink);
+		CommonLib.clickElement(driver, simpleFormDemoLink);
 	}
 
 	// submit
 	public void enterMessage(String message) {
 
-		CommonLib.sendKeys(inputMessage, message);
+		CommonLib.sendKeys(driver, inputMessage, message);
 	}
 
 	public void clickMessageButton() {
-		CommonLib.clickElement(showMessageButton);
+		CommonLib.clickElement(driver, showMessageButton);
 	}
 
 	public void enterValue1(String value) {
-		CommonLib.sendKeys(value1, value);
+		CommonLib.sendKeys(driver, value1, value);
 	}
 
 	public void enterValue2(String value) {
-		CommonLib.sendKeys(value2, value);
+		CommonLib.sendKeys(driver, value2, value);
 	}
 
 	public void getTotal() {
-		CommonLib.clickElement(getTotal);
+		CommonLib.clickElement(driver, getTotal);
 	}
 }

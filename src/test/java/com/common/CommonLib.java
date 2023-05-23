@@ -1,14 +1,17 @@
 package com.common;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CommonLib extends MainLogger {
 
 	// Click Element
-	public static void clickElement(WebElement locator) {
+	public static void clickElement(WebDriver driver, WebElement locator) {
 
 		if (locator.isDisplayed() && locator.isEnabled()) {
 			try {
+				CommonUtil.threadSleep(1);
+				CommonUtil.captureScreenShot(driver);
 				locator.click();
 				logger.info(String.format("Element Clicked: %s", locator));
 			} catch (Exception e) {
@@ -22,11 +25,12 @@ public class CommonLib extends MainLogger {
 	}
 
 	// Send Keys
-	public static void sendKeys(WebElement locator, String value) {
+	public static void sendKeys(WebDriver driver, WebElement locator, String value) {
 
 		if (locator.isDisplayed() && locator.isEnabled()) {
 			try {
 				locator.sendKeys(value);
+				CommonUtil.captureScreenShot(driver);
 				logger.info(String.format("Value Entered: %s", value));
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -38,12 +42,14 @@ public class CommonLib extends MainLogger {
 	}
 
 	// Check the checkbox
-	public static void selectCheckBox(WebElement locator) {
+	public static void selectCheckBox(WebDriver driver, WebElement locator) {
 
 		if (locator.isDisplayed() && locator.isEnabled() && !locator.isSelected()) {
 			logger.info(String.format("Checkbox is not checked"));
 			try {
+
 				locator.click();
+				CommonUtil.captureScreenShot(driver);
 				logger.info(String.format("Element Checked: %s", locator));
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -55,12 +61,13 @@ public class CommonLib extends MainLogger {
 	}
 
 	// Uncheck the checkbox
-	public static void deselectCheckBox(WebElement locator) {
+	public static void deselectCheckBox(WebDriver driver, WebElement locator) {
 
 		if (locator.isDisplayed() && locator.isEnabled() && locator.isSelected()) {
 			logger.info(String.format("Checkbox is checked"));
 			try {
 				locator.click();
+				CommonUtil.captureScreenShot(driver);
 				logger.info(String.format("Element Unchecked: %s", locator));
 			} catch (Exception e) {
 				e.printStackTrace();

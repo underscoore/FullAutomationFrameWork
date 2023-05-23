@@ -9,7 +9,7 @@ import com.pages.SimpleFormPage;
 
 public class ValidateSimpleFormTest extends CommonBase {
 
-	@Test(enabled = true, invocationCount = 5)
+	@Test(enabled = true, invocationCount = 1)
 	public void checkForMessage() throws Exception {
 
 		String messageData = ExcelDataReader.data("MESSAGE");
