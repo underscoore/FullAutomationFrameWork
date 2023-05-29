@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-23T09:43:39Z" name="CorssBrowserTesting" finished-at="2023-05-23T09:44:04Z" duration-ms="25122">
+  <suite started-at="2023-05-29T09:11:04Z" name="CorssBrowserTesting" finished-at="2023-05-29T09:11:22Z" duration-ms="18151">
     <groups>
     </groups>
-    <test started-at="2023-05-23T09:43:39Z" name="RegressionOnFirefox" finished-at="2023-05-23T09:44:04Z" duration-ms="25122">
+    <test started-at="2023-05-29T09:11:04Z" name="RegressionOnFirefox" finished-at="2023-05-29T09:11:22Z" duration-ms="18151">
       <class name="com.test.ValidateSimpleFormTest">
-        <test-method is-config="true" signature="tearUp(java.lang.String)[pri:0, instance:com.test.ValidateSimpleFormTest@485a3466]" started-at="2023-05-23T09:43:50Z" name="tearUp" finished-at="2023-05-23T09:43:54Z" duration-ms="4123" status="PASS">
+        <test-method is-config="true" signature="tearUp(java.lang.String)[pri:0, instance:com.test.ValidateSimpleFormTest@485a3466]" started-at="2023-05-29T09:11:13Z" name="tearUp" finished-at="2023-05-29T09:11:17Z" duration-ms="3345" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,17 +18,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method signature="checkForMessage()[pri:0, instance:com.test.ValidateSimpleFormTest@485a3466]" started-at="2023-05-23T09:43:54Z" name="checkForMessage" finished-at="2023-05-23T09:44:03Z" duration-ms="9151" status="PASS">
+        <test-method signature="checkForMessage()[pri:0, instance:com.test.ValidateSimpleFormTest@485a3466]" started-at="2023-05-29T09:11:17Z" name="checkForMessage" finished-at="2023-05-29T09:11:22Z" duration-ms="5073" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkForMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.ValidateSimpleFormTest@485a3466]" started-at="2023-05-23T09:44:03Z" name="tearDown" finished-at="2023-05-23T09:44:04Z" duration-ms="531" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.ValidateSimpleFormTest@485a3466]" started-at="2023-05-29T09:11:22Z" name="tearDown" finished-at="2023-05-29T09:11:22Z" duration-ms="535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.test.ValidateSimpleFormTest -->
       <class name="com.test.ValidateCheckBoxTest">
-        <test-method is-config="true" signature="tearUp(java.lang.String)[pri:0, instance:com.test.ValidateCheckBoxTest@7a527389]" started-at="2023-05-23T09:43:39Z" name="tearUp" finished-at="2023-05-23T09:43:43Z" duration-ms="4200" status="PASS">
+        <test-method is-config="true" signature="tearUp(java.lang.String)[pri:0, instance:com.test.ValidateCheckBoxTest@7a527389]" started-at="2023-05-29T09:11:04Z" name="tearUp" finished-at="2023-05-29T09:11:08Z" duration-ms="4148" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,11 +39,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method signature="checkBox()[pri:0, instance:com.test.ValidateCheckBoxTest@7a527389]" started-at="2023-05-23T09:43:43Z" name="checkBox" finished-at="2023-05-23T09:43:50Z" duration-ms="6570" status="PASS">
+        <test-method signature="checkBox()[pri:0, instance:com.test.ValidateCheckBoxTest@7a527389]" started-at="2023-05-29T09:11:08Z" name="checkBox" finished-at="2023-05-29T09:11:13Z" duration-ms="4503" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkBox -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.ValidateCheckBoxTest@7a527389]" started-at="2023-05-23T09:43:50Z" name="tearDown" finished-at="2023-05-23T09:43:50Z" duration-ms="531" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.ValidateCheckBoxTest@7a527389]" started-at="2023-05-29T09:11:13Z" name="tearDown" finished-at="2023-05-29T09:11:13Z" duration-ms="532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

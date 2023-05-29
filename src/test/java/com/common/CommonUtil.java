@@ -2,7 +2,6 @@ package com.common;
 
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,7 +13,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class CommonUtil extends MainLogger {
-	private static String date = new SimpleDateFormat("MM-dd-yyyy-HH-mm-ss-SSSZ").format(new Date());
+
+//	private static String date = new SimpleDateFormat("MM-dd-yyyy-HH-mm-ss-SSSZ").format(new Date());
 
 	// Reading Property File and
 	// Getting theProp value
@@ -53,14 +53,23 @@ public class CommonUtil extends MainLogger {
 	// Method to take screen shot
 
 	public static void captureScreenShot(WebDriver driver) {
-		File screenhotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//		File screenhotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 		try {
-			FileUtils.copyFile(screenhotFile, new File(String.format("./ScreenShots/%s.png", date)));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			TakesScreenshot ts = (TakesScreenshot) driver;
+			File source = ts.getScreenshotAs(OutputType.FILE);
+			String date = new SimpleDateFormat("MM-dd-yyyy-HH-mm-ss-SSS").format(new Date());
+			FileUtils.copyFile(source, new File("./Screenshots/" + "screenshot-" + date + ".png"));
+			System.out.println("Screenshot taken");
+		} catch (Exception e) {
+			System.out.println("Exception while taking screenshot " + e.getMessage());
 		}
+
+//		try {
+//			FileUtils.copyFile(screenhotFile, new File(String.format("./ScreenShots/%s.png", date)));
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	// Sleep method
@@ -69,7 +78,6 @@ public class CommonUtil extends MainLogger {
 		try {
 			Thread.sleep(sec * 1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
