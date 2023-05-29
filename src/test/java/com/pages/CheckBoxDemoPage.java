@@ -19,18 +19,18 @@ public class CheckBoxDemoPage extends CommonBase {
 	WebElement checkBox;
 
 	public void clickInputFormLink() {
-		CommonLib.clickElement(inputFormLink);
+		CommonLib.clickElement(driver, inputFormLink);
 	}
 
 	public void clickCheckBoxDemoLink() {
-		CommonLib.clickElement(checkBoxDemoLink);
+		CommonLib.clickElement(driver, checkBoxDemoLink);
 	}
 
 	public void selectCheckBox() {
-		CommonLib.selectCheckBox(checkBox);
+		CommonLib.selectCheckBox(driver, checkBox);
 	}
 
 	public void deselectCheckBox() {
-		CommonLib.deselectCheckBox(checkBox);
+		CommonLib.deselectCheckBox(driver, checkBox);
 	}
 }
